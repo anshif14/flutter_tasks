@@ -12,6 +12,8 @@ class _ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(onPressed: (){} ,
+        child: Icon(Icons.chat),backgroundColor: Color(0xFF120760),),
         body: ListView.separated(
             itemBuilder: (BuildContext context, int index) {
               return ListTile(

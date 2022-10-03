@@ -16,6 +16,8 @@ class _ContactPageState extends State<ContactPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        floatingActionButton: FloatingActionButton(onPressed: (){} ,
+          child: Icon(Icons.person_add_alt),backgroundColor: Color(0xFF120760),),
         body:
 
         ListView.separated(

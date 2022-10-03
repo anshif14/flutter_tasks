@@ -33,7 +33,6 @@ class _ListTilePageState extends State<ListTilePage> {
             indicatorColor: Colors.white,
             tabs: [
               Tab(
-
                 icon: Icon(Icons.message_outlined),
                 text: 'Chat',
               ),
@@ -41,8 +40,7 @@ class _ListTilePageState extends State<ListTilePage> {
                 icon: Icon(Icons.mail_outline_outlined),
                 text: 'E mail',
               ),
-              Tab(icon: Icon(Icons.contact_mail_outlined),
-                  text: 'Contacts'),
+              Tab(icon: Icon(Icons.contact_mail_outlined), text: 'Contacts'),
             ],
           ),
         ),
@@ -55,54 +53,67 @@ class _ListTilePageState extends State<ListTilePage> {
                     height: 30,
                   ),
                   GestureDetector(
-                    onTap: (){Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context)=>const HomePage()));},
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomePage()));
+                    },
                     child: const ListTile(
                       leading: Text('Home'),
                       trailing: Icon(Icons.home),
                     ),
                   ),
-        GestureDetector(
-          onTap: (){Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context)=>const ChatPage()));},
-                 child:
-                 const ListTile(
-
-                    leading: Text('Chat'),
-                    trailing: Icon(Icons.home),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChatPage()));
+                    },
+                    child: const ListTile(
+                      leading: Text('Chat'),
+                      trailing: Icon(Icons.home),
+                    ),
                   ),
-        ),
-        GestureDetector(
-          onTap: (){Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context)=>const EmailPage()));},
-          child:
-                  const ListTile(
-                    leading: Text('Mail'),
-                    trailing: Icon(Icons.home),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const EmailPage()));
+                    },
+                    child: const ListTile(
+                      leading: Text('Mail'),
+                      trailing: Icon(Icons.home),
+                    ),
                   ),
-        ),
-        GestureDetector(
-          onTap: (){Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context)=>const ContactPage()));},
-          child:
-
-                  const ListTile(
-                    leading: Text('Contact'),
-                    trailing: Icon(Icons.home),
-                  ),
-        )
-
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ContactPage()));
+                    },
+                    child: const ListTile(
+                      leading: Text('Contact'),
+                      trailing: Icon(Icons.home),
+                    ),
+                  )
                 ],
               )
             ],
           ),
         ),
-        body: const TabBarView(
-          children: [
-            ChatPage(),
-            EmailPage(),
-            ContactPage(),
-          ],
+        body: Container( height: double.infinity,
+          width: double.infinity,
+          child: const TabBarView(
+            children: [
+              ChatPage(),
+              EmailPage(),
+              ContactPage(),
+            ],
+          ),
         ),
       ),
     );

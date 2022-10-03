@@ -12,6 +12,8 @@ class _EmailPageState extends State<EmailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        floatingActionButton: FloatingActionButton(onPressed: (){} ,
+          child: Icon(Icons.mail_outline_outlined),backgroundColor: Color(0xFF120760),),
         body:
 
         ListView.separated(
