@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tasks/screens/homepage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CatalogPage extends StatefulWidget {
@@ -30,13 +31,19 @@ class _CatalogPageState extends State<CatalogPage> {
 
   @override
   Widget build(BuildContext context) {
+
     return SafeArea(
       child: Scaffold(
+        floatingActionButton:
+        FloatingActionButton(
+          child: Icon(Icons.home),
+            onPressed: (){Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context)=>HomePage()));}),
         body: Container(
           height: double.infinity,
           width: double.infinity,
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(5.0),
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
