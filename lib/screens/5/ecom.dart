@@ -20,7 +20,7 @@ class _CatalogPageState extends State<CatalogPage> {
     'S22 ultra',
     'pixel 7 pro',
     'Apple watch series 7'
-   ,'iphone 14 pro Max'
+   ,'iphone 14 pro Max '
   ];
   final price = [
     '1,40,000',
